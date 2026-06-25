@@ -13,20 +13,17 @@ and SQL.
 npm install @maxal_studio/kratosjs-plugin-logging
 ```
 
-> Testing against a local, unpublished build of KratosJs? See
-> [Developing & Testing Plugins Locally](../../nodejs-kratosjs/docs/plugins/local-development.md).
-
 ## Register
 
 **Server** (`src/index.ts`):
 
 ```ts
-import { LoggingPlugin } from '@maxal_studio/kratosjs-plugin-logging';
+import { LoggingPlugin } from "@maxal_studio/kratosjs-plugin-logging";
 
-Panel.make('admin')
-	// ...
-	.resources([UserResource /* , ... */])
-	.plugins([new LoggingPlugin()]);
+Panel.make("admin")
+  // ...
+  .resources([UserResource /* , ... */])
+  .plugins([new LoggingPlugin()]);
 ```
 
 Operations on the resources registered on the panel are logged automatically — there's
